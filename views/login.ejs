@@ -1,0 +1,16 @@
+<% include partials/header %>
+<div class="ui main text container">
+    <h1 style="color: white">Login!</h1>
+    <div class="ui form">
+        <form action="/login" method="POST">
+            <div class="field">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="field">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <button class="ui large blue button">Submit</button>
+        </form>
+    </div>
+</div>
+<% include partials/footer %>

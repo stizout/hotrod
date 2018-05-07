@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<div class="ui main text container">
+    <form class="ui form" action="/hotrods/<%= hotrod._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label class="the">Edit Blog: <%= hotrod.title %></label>
+           <input type="text" name="hotrod[title]" value="<%= hotrod.title %>"> 
+        </div>
+        <div class="field">
+            <label>Make</label>
+            <input type="text" name="hotrod[make]" value="<%= hotrod.make %>">
+        </div>
+        <div class="field">
+            <label>Model</label>
+           <input type="text" name="hotrod[model]" value="<%= hotrod.model %>"> 
+        </div>
+        <div class="field">
+            <label>Year</label>
+            <input type="number" name="hotrod[year]" value="<%= hotrod.year %>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+           <input type="text" name="hotrod[image]" value="<%= hotrod.image %>"> 
+        </div>
+        <div class="field">
+            <textarea name="hotrod[content]"><%= hotrod.content %></textarea>
+        </div>
+        <input class="ui big primary button" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,39 @@
+<% include ../partials/header.ejs %>
+
+<div class="ui main text container">
+    <div class="ui huge header">
+       <h1>Ultimate Car Blog</h1>
+   </div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <div class="item">
+                <% hotrods.forEach(function(hotrod){ %>
+                <div class="content">
+                    <div id="title"><%= hotrod.title %></div>
+                    <div id="info">
+                        <%= hotrod.year %>
+                        <%= hotrod.make %>
+                        <%= hotrod.model %>
+                    </div>
+                    <div class="ui image">
+                        <img src="<%= hotrod.image %>">
+                    </div>
+                    <div class="description">
+                        <%= hotrod.content %>
+                    </div>
+                    <div>
+                        <h4>Submitted By: <%= hotrod.author.username %></h4>
+                        <a href="/hotrods/<%= hotrod._id%>" class="ui small green button">Read More</a>
+                        <h6></h6>
+                    </div>
+                    
+                    <% }); %>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bottom"></div>
+<% include ../partials/footer %>

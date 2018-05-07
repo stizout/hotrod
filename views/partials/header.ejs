@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Blog</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran|Poiret+One" rel="stylesheet">
+    </head>
+    <body>
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div class="header item"><i class="car icon"></i>Blog Site</div>
+                <a href="/" class="item"><i class="home icon"></i></a>
+                <a href="/hotrods/new" class="item">New Post</a>
+            </div>
+            <div class="right menu">
+                <% if(!currentUser){ %>
+                    <a href="/register" class="ui item">Sign Up</a>
+                    <a href="/login" class="ui item">Login</a>
+               <% } else { %>
+                    <a class="ui item">Signed in as: <%= currentUser.username %></a>
+                    <a href="/logout" class="ui item">Logout</a>
+               <% } %>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+        

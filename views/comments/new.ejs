@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+<div class="ui main text container">
+    <form class="ui form" action="/hotrods/<%= hotrod._id %>/comments" method="POST">
+        <div class="field">
+            <label class="the">Comment</label>
+           <input type="text" name="comment[text]" placeholder="Comment"> 
+        </div>
+        <input class="ui big primary button" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>

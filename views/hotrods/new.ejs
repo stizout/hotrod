@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<div class="ui main text container">
+    <form class="ui form" action="/hotrods" method="POST">
+        <div class="field">
+            <label class="the">Title</label>
+           <input type="text" name="title" placeholder="My Car"> 
+        </div>
+        <div class="field">
+            <label>Make</label>
+            <input type="text" name="make" placeholder="Ex. Toyota">
+        </div>
+        <div class="field">
+            <label>Model</label>
+           <input type="text" name="model" placeholder="Ex. Supra"> 
+        </div>
+        <div class="field">
+            <label>Year</label>
+            <input type="number" name="year" placeholder="Ex. 1999">
+        </div>
+        <div class="field">
+            <label>Image</label>
+           <input type="text" name="image" placeholder="URL goes here"> 
+        </div>
+        <div class="field">
+            <textarea name="content"></textarea>
+        </div>
+        <input class="ui big primary button" type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %>
