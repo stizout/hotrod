@@ -26,7 +26,8 @@ app.use(express.static("public"));
 app.use(methodOverride("_method"));
 
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect("mongodb://localhost/hotrod");
+// mongoose.connect("mongodb://localhost/hotrod");
+mongoose.connect("mongodb://stizout:packard88@ds217350.mlab.com:17350/hotrod");
 
 var hotrodSchema = new mongoose.Schema({
     title: String,
