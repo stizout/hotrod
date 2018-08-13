@@ -82,7 +82,16 @@ app.post("/hotrods",isLoggedIn, function(req, res){
         id: req.user._id,
         username: req.user.username
     };
-    var newHotrod = {title: title, image: image, make: make, model: model, year: year, content: content, author: author};
+    var newHotrod = {
+        title: title,
+        image: image, 
+        make: make, 
+        model: model, 
+        year: year, 
+        content: content, 
+        author: author
+        
+    };
     Hotrod.create(newHotrod, function(err, newHotrod){
         if(err){
             res.redirect("/hotrods/new");

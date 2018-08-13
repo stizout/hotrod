@@ -23,8 +23,8 @@
         <%if(currentUser && hotrod.author.id.equals(currentUser._id)){%>
             <a href="/hotrods/<%= hotrod._id %>/edit" class="ui small yellow button">Edit</a>
             <form action="/hotrods/<%= hotrod._id%>?_method=delete" method="POST">
-            <button class="ui small red button">Delete</button>
-    </form>
+                <button class="ui small red button">Delete</button>
+            </form>
         <% } %>
     </div>
 </div>
